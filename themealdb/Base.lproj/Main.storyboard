@@ -15,14 +15,63 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="U3z-2C-fAW">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="83" id="6hS-GN-Xf9" customClass="MealTableViewCell" customModule="themealdb">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="83"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6hS-GN-Xf9" id="xxz-PT-0bw">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5D-uk-AJm">
+                                                    <rect key="frame" x="40" y="21" width="334" height="41"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="cg5-ZE-6wu"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="f5D-uk-AJm" secondAttribute="trailing" constant="20" id="04r-w8-mRv"/>
+                                                <constraint firstItem="f5D-uk-AJm" firstAttribute="top" secondItem="xxz-PT-0bw" secondAttribute="topMargin" constant="10" id="CcG-7E-zas"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="f5D-uk-AJm" secondAttribute="bottom" constant="10" id="Rbh-f7-ekX"/>
+                                                <constraint firstItem="f5D-uk-AJm" firstAttribute="leading" secondItem="xxz-PT-0bw" secondAttribute="leadingMargin" constant="20" id="sQG-og-B0D"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="f5D-uk-AJm" id="oxU-QF-0KR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ojK-B6-6I9"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Gaz-Ra-zzk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="U3z-2C-fAW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Hqn-Zx-OSs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="U3z-2C-fAW" secondAttribute="bottom" id="OFz-nw-UMh"/>
+                            <constraint firstItem="U3z-2C-fAW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="TNY-jp-XYg"/>
+                            <constraint firstItem="U3z-2C-fAW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aGu-4x-alQ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bGS-YG-4mJ"/>
+                    <connections>
+                        <outlet property="tableView" destination="U3z-2C-fAW" id="rDs-Ow-kCC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="470" y="110"/>
+            <point key="canvasLocation" x="469.56521739130437" y="109.82142857142857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ruX-pM-ua0">
