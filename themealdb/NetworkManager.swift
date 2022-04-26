@@ -11,11 +11,14 @@ class NetworkManager {
     
     static let shared = NetworkManager()
     
-    func fetchData(completion: @escaping ([MealList]) -> Void)  {
+    private let mealsListURL = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert"
+    private let mealsDetailListURL = "https://www.themealdb.com/api/json/v1/1/lookup.php?i="
+    
+    func fetchListOfMeals(completion: @escaping ([MealList]) -> Void)  {
         
         let session = URLSession.shared
         
-        if let url = URL(string: "https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert") {
+        if let url = URL(string: mealsListURL) {
             let task = session.dataTask(with: url, completionHandler: { data, response, error in
                 if let error = error {
                     print(error.localizedDescription)
@@ -30,6 +33,8 @@ class NetworkManager {
                         }
                     } catch {
                         print("Error during JSON serialization: \(error.localizedDescription)")
+                        let emptyMealsList = [MealList]()
+                        completion(emptyMealsList)
                     }
                 }
             })
