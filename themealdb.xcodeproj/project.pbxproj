@@ -20,8 +20,6 @@
 		5EF26D5E2817081200EF6974 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF26D5C2817081200EF6974 /* NetworkManager.swift */; };
 		5EF26D602817090F00EF6974 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF26D5F2817090F00EF6974 /* Meal.swift */; };
 		5EF26D612817090F00EF6974 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF26D5F2817090F00EF6974 /* Meal.swift */; };
-		5EF26D63281709D500EF6974 /* MealList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF26D62281709D500EF6974 /* MealList.swift */; };
-		5EF26D64281709D500EF6974 /* MealList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF26D62281709D500EF6974 /* MealList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +55,6 @@
 		5EF26D4F2817040F00EF6974 /* themealdbUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = themealdbUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5EF26D5C2817081200EF6974 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5EF26D5F2817090F00EF6974 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
-		5EF26D62281709D500EF6974 /* MealList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +138,6 @@
 		5EF26D6528170B3E00EF6974 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5EF26D62281709D500EF6974 /* MealList.swift */,
 				5EF26D5F2817090F00EF6974 /* Meal.swift */,
 			);
 			path = Model;
@@ -291,7 +287,6 @@
 				5EF26D312817040E00EF6974 /* MealListViewController.swift in Sources */,
 				5EF26D2D2817040E00EF6974 /* AppDelegate.swift in Sources */,
 				5EF26D2F2817040E00EF6974 /* SceneDelegate.swift in Sources */,
-				5EF26D63281709D500EF6974 /* MealList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +297,6 @@
 				5EF26D5E2817081200EF6974 /* NetworkManager.swift in Sources */,
 				5EF26D612817090F00EF6974 /* Meal.swift in Sources */,
 				5EF26D442817040F00EF6974 /* themealdbTests.swift in Sources */,
-				5EF26D64281709D500EF6974 /* MealList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
