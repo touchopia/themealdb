@@ -11,9 +11,13 @@ class MealListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        NetworkManager.shared.fetchData { mealsArray in
+            for m in mealsArray {
+                print(m.strMeal)
+                print(m.idMeal)
+            }
+        }
     }
-
-
 }
 
