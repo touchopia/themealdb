@@ -2,7 +2,7 @@
 //  MealTableViewCell.swift
 //  themealdb
 //
-//  Created by Phil Wright on 4/26/22.
+//  Created by Phil Wright on 4/27/22.
 //
 
 import UIKit
@@ -10,6 +10,7 @@ import UIKit
 class MealTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var mealImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,8 +19,6 @@ class MealTableViewCell: UITableViewCell {
     }
     
     func setupCell() {
-        self.titleLabel.text = "Test"
+        self.titleLabel.text = "Test long title for this"
     }
-
-
 }
