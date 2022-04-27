@@ -14,9 +14,13 @@ class MealListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(MealTableViewCell.self,
-                           forCellReuseIdentifier: MealTableViewCell.reuseIdentifier)
+        setupTableView()
         loadData()
+    }
+    
+    func setupTableView() {
+        let nib = UINib(nibName: MealTableViewCell.reuseIdentifier, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: MealTableViewCell.reuseIdentifier)
     }
     
     func loadData() {
@@ -31,6 +35,10 @@ class MealListViewController: UIViewController {
 extension MealListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 88
     }
     
 }

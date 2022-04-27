@@ -19,36 +19,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="U3z-2C-fAW">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="83" id="6hS-GN-Xf9" customClass="MealTableViewCell" customModule="themealdb">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="83"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6hS-GN-Xf9" id="xxz-PT-0bw">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5D-uk-AJm">
-                                                    <rect key="frame" x="40" y="21" width="334" height="41"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="cg5-ZE-6wu"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="f5D-uk-AJm" secondAttribute="trailing" constant="20" id="04r-w8-mRv"/>
-                                                <constraint firstItem="f5D-uk-AJm" firstAttribute="top" secondItem="xxz-PT-0bw" secondAttribute="topMargin" constant="10" id="CcG-7E-zas"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="f5D-uk-AJm" secondAttribute="bottom" constant="10" id="Rbh-f7-ekX"/>
-                                                <constraint firstItem="f5D-uk-AJm" firstAttribute="leading" secondItem="xxz-PT-0bw" secondAttribute="leadingMargin" constant="20" id="sQG-og-B0D"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="titleLabel" destination="f5D-uk-AJm" id="oxU-QF-0KR"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="ojK-B6-6I9"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Gaz-Ra-zzk"/>
