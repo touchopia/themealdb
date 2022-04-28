@@ -1,17 +1,11 @@
 //
-//  Extensions.swift
+//  UIImageView+Cache.swift
 //  themealdb
 //
 //  Created by Phil Wright on 4/26/22.
 //
 
 import UIKit
-
-extension UITableViewCell {
-    static var reuseIdentifier: String {
-        String(describing: self)
-    }
-}
 
 let imageCache = NSCache<NSString, UIImage>()
 

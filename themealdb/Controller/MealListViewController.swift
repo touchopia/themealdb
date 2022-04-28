@@ -9,7 +9,19 @@ import UIKit
 
 class MealListViewController: UIViewController {
 
+    // MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: Properties
+    var meals: [Meal] = [Meal]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    var viewModel: MealViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,17 +30,20 @@ class MealListViewController: UIViewController {
         loadData()
     }
     
+    // MARK - Setup TableView
     func setupTableView() {
-        let nib = UINib(nibName: MealTableViewCell.reuseIdentifier, bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: MealTableViewCell.reuseIdentifier)
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        let nib = UINib(nibName: "MealTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "MealTableViewCell")
     }
     
     func loadData() {
-        NetworkManager.shared.fetchListOfMeals { mealsArray in
-            for m in mealsArray {
-                print("\(m.idMeal): \(m.strMeal): \(m.strMealThumb)")
-            }
-        }
+        let apiClient = APIClient()
+        apiClient.fetchListOfMeals(completion: { [weak self] mealsArray in
+            self?.meals = mealsArray
+        })
     }
 }
 
@@ -38,18 +53,20 @@ extension MealListViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 88
+        return 100
     }
     
 }
 
 extension MealListViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return meals.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: MealTableViewCell.reuseIdentifier, for: indexPath) as? MealTableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "MealTableViewCell", for: indexPath) as? MealTableViewCell {
+            cell.configure(meal: meals[indexPath.row])
             return cell
         }
         return UITableViewCell()
