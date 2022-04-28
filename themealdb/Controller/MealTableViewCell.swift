@@ -25,7 +25,6 @@ class MealTableViewCell: UITableViewCell {
     
     func configure(meal: Meal) {
         self.titleLabel.text = meal.strMeal
-        print(meal.strMealThumb)
         self.mealImageView?.loadImageFromURL(urlString: meal.strMealThumb, placeholder: placeholderImage)
     }
 }
