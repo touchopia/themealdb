@@ -33,11 +33,57 @@
                     <navigationItem key="navigationItem" id="bGS-YG-4mJ"/>
                     <connections>
                         <outlet property="tableView" destination="U3z-2C-fAW" id="rDs-Ow-kCC"/>
+                        <segue destination="Vep-2Z-wka" kind="show" identifier="showMealDetail" id="n3M-8l-rah"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="469.56521739130437" y="109.82142857142857"/>
+        </scene>
+        <!--Meal Detail View Controller-->
+        <scene sceneID="x3Q-On-a2k">
+            <objects>
+                <viewController storyboardIdentifier="MealDetailViewController" id="Vep-2Z-wka" customClass="MealDetailViewController" customModule="themealdb" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qSz-0H-J6H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lKz-Db-09d">
+                                <rect key="frame" x="0.0" y="88" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="bhO-wc-q9d"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvy-H5-EqK">
+                                <rect key="frame" x="20" y="396" width="374" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Yl6-2A-Ian"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3kH-4P-YCu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zvy-H5-EqK" firstAttribute="top" secondItem="lKz-Db-09d" secondAttribute="bottom" constant="8" id="MxH-Jc-W2P"/>
+                            <constraint firstItem="3kH-4P-YCu" firstAttribute="trailing" secondItem="Zvy-H5-EqK" secondAttribute="trailing" constant="20" id="O7j-fe-tyF"/>
+                            <constraint firstItem="3kH-4P-YCu" firstAttribute="trailing" secondItem="lKz-Db-09d" secondAttribute="trailing" id="XFC-z4-ggg"/>
+                            <constraint firstItem="lKz-Db-09d" firstAttribute="top" secondItem="3kH-4P-YCu" secondAttribute="top" id="aU7-49-rHH"/>
+                            <constraint firstItem="lKz-Db-09d" firstAttribute="leading" secondItem="3kH-4P-YCu" secondAttribute="leading" id="c7a-PO-e6S"/>
+                            <constraint firstItem="Zvy-H5-EqK" firstAttribute="leading" secondItem="3kH-4P-YCu" secondAttribute="leading" constant="20" id="qXb-Jf-0xJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LxG-Vz-Ep1"/>
+                    <connections>
+                        <outlet property="imageView" destination="lKz-Db-09d" id="Svq-7s-zcU"/>
+                        <outlet property="titleLabel" destination="Zvy-H5-EqK" id="1D2-cp-ghu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mlA-cs-Bwq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1384" y="110"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ruX-pM-ua0">

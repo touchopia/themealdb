@@ -21,13 +21,24 @@ class MealListViewController: UIViewController {
         }
     }
     
+    var currentMeal: Meal?
+    
     var viewModel: MealViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = "Meals"
+        
         setupTableView()
         loadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMealDetail" {
+            let vc = segue.destination as? MealDetailViewController
+            vc?.meal = currentMeal
+        }
     }
     
     // MARK - Setup TableView
@@ -50,6 +61,8 @@ class MealListViewController: UIViewController {
 extension MealListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        currentMeal = meals[indexPath.row]
+        performSegue(withIdentifier: "showMealDetail", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
