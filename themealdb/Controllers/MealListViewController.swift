@@ -52,9 +52,15 @@ class MealListViewController: UIViewController {
     
     func loadData() {
         let apiClient = APIClient()
-        apiClient.fetchListOfMeals(completion: { [weak self] mealsArray in
-            self?.meals = mealsArray
-        })
+        
+        apiClient.fetchListOfMeals(completion: { [weak self] result in
+            switch result {
+                case .success(let meals):
+                    self?.meals = meals
+                case .failure(let error):
+                    print(error.localizedDescription)
+            }
+         })
     }
 }
 
