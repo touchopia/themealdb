@@ -30,6 +30,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let navigation = UINavigationController(rootViewController: rootViewController)
         
+        // Navigation Setup
+        UINavigationBar.appearance().tintColor = UIColor.black
+        UINavigationBar.appearance().barStyle = .default
+        UINavigationBar.appearance().prefersLargeTitles = true
+        
         /// 4. Set the root view controller of the window with your view controller
         window.rootViewController = navigation
         
