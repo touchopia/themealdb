@@ -11,23 +11,17 @@ class MealListViewController: UIViewController {
 
     // MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: Properties
-    var meals: [Meal] = [Meal]() {
-        didSet {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
-    }
+    var meals: [Meal] = [Meal]()
     
     var currentMeal: Meal?
     
-    var viewModel: MealViewModel?
+    var viewModel: MealListViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         navigationItem.title = "Meals"
         
         setupTableView()
@@ -41,6 +35,11 @@ class MealListViewController: UIViewController {
         }
     }
     
+    func configure(with viewModel: MealListViewModel) {
+        self.viewModel = viewModel
+        self.viewModel?.delegate = self
+    }
+    
     // MARK - Setup TableView
     func setupTableView() {
         
@@ -51,16 +50,9 @@ class MealListViewController: UIViewController {
     }
     
     func loadData() {
-        let apiClient = APIClient()
-        
-        apiClient.fetchListOfMeals(completion: { [weak self] result in
-            switch result {
-                case .success(let meals):
-                    self?.meals = meals
-                case .failure(let error):
-                    print(error.localizedDescription)
-            }
-         })
+        viewModel?.loadMealsList(completion: { [weak self] mealsArray in
+            self?.meals = mealsArray
+        })
     }
 }
 
@@ -90,5 +82,25 @@ extension MealListViewController: UITableViewDataSource {
         }
         return UITableViewCell()
     }
+}
+
+// notifications from the view model
+extension MealListViewController: ViewModelDelegate {
+    
+    func willLoadData() {
+        activityIndicator.startAnimating()
+    }
+    
+    func didLoadData() {
+        // reloads tableView data from model.taskNames
+        tableView.reloadData()
+        activityIndicator.stopAnimating()
+    }
+    
+    func didLoadDataWithError(error: Error) {
+        activityIndicator.stopAnimating()
+        print("\(error.localizedDescription)")
+    }
+    
 }
 
