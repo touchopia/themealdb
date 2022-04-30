@@ -69,13 +69,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="X2I-Cc-Um3">
+                                <rect key="frame" x="188.5" y="219.5" width="37" height="37"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3kH-4P-YCu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="X2I-Cc-Um3" firstAttribute="centerY" secondItem="lKz-Db-09d" secondAttribute="centerY" id="1SD-7l-Tif"/>
                             <constraint firstItem="Zvy-H5-EqK" firstAttribute="top" secondItem="lKz-Db-09d" secondAttribute="bottom" constant="8" id="MxH-Jc-W2P"/>
                             <constraint firstItem="3kH-4P-YCu" firstAttribute="trailing" secondItem="Zvy-H5-EqK" secondAttribute="trailing" constant="20" id="O7j-fe-tyF"/>
                             <constraint firstItem="3kH-4P-YCu" firstAttribute="trailing" secondItem="lKz-Db-09d" secondAttribute="trailing" id="XFC-z4-ggg"/>
+                            <constraint firstItem="X2I-Cc-Um3" firstAttribute="centerX" secondItem="lKz-Db-09d" secondAttribute="centerX" id="Xil-9S-sTA"/>
                             <constraint firstItem="lKz-Db-09d" firstAttribute="top" secondItem="3kH-4P-YCu" secondAttribute="top" id="aU7-49-rHH"/>
                             <constraint firstItem="lKz-Db-09d" firstAttribute="leading" secondItem="3kH-4P-YCu" secondAttribute="leading" id="c7a-PO-e6S"/>
                             <constraint firstItem="Zvy-H5-EqK" firstAttribute="leading" secondItem="3kH-4P-YCu" secondAttribute="leading" constant="20" id="qXb-Jf-0xJ"/>
@@ -83,6 +89,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="LxG-Vz-Ep1"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="X2I-Cc-Um3" id="xVJ-zz-mhe"/>
                         <outlet property="imageView" destination="lKz-Db-09d" id="Svq-7s-zcU"/>
                         <outlet property="titleLabel" destination="Zvy-H5-EqK" id="1D2-cp-ghu"/>
                     </connections>

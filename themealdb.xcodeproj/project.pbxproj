@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E07E94F281DDCC600754ED8 /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E07E94E281DDCC600754ED8 /* MealViewModel.swift */; };
+		5E07E950281DDCC600754ED8 /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E07E94E281DDCC600754ED8 /* MealViewModel.swift */; };
+		5E07E952281DDCF000754ED8 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E07E951281DDCF000754ED8 /* Protocols.swift */; };
 		5E364DEB281C524E00C52A2C /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E364DEA281C524E00C52A2C /* Endpoints.swift */; };
 		5E646FA42819A8B50028AA13 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E646FA22819A8B50028AA13 /* MealTableViewCell.swift */; };
 		5E646FA62819A8B50028AA13 /* MealTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E646FA32819A8B50028AA13 /* MealTableViewCell.xib */; };
@@ -50,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E07E94E281DDCC600754ED8 /* MealViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
+		5E07E951281DDCF000754ED8 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		5E364DEA281C524E00C52A2C /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		5E646FA22819A8B50028AA13 /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		5E646FA32819A8B50028AA13 /* MealTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealTableViewCell.xib; sourceTree = "<group>"; };
@@ -98,6 +103,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E07E954281DDCFF00754ED8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5E07E951281DDCF000754ED8 /* Protocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		5E364DEC281C581700C52A2C /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				5E646FA82819AE7F0028AA13 /* MealListViewModel.swift */,
+				5E07E94E281DDCC600754ED8 /* MealViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -170,6 +184,7 @@
 				5EF26D6628170B5400EF6974 /* Controllers */,
 				5EF26D6528170B3E00EF6974 /* Models */,
 				5E364DEE281C589F00C52A2C /* TableViewCells */,
+				5E07E954281DDCFF00754ED8 /* Protocols */,
 				5E364DEF281C58B100C52A2C /* Extensions */,
 				5EF26D322817040E00EF6974 /* Main.storyboard */,
 				5EF26D352817040E00EF6974 /* Assets.xcassets */,
@@ -348,6 +363,8 @@
 			files = (
 				5EF26D602817090F00EF6974 /* Meal.swift in Sources */,
 				5E646FA92819AE7F0028AA13 /* MealListViewModel.swift in Sources */,
+				5E07E94F281DDCC600754ED8 /* MealViewModel.swift in Sources */,
+				5E07E952281DDCF000754ED8 /* Protocols.swift in Sources */,
 				5EC89D67281B675C00D60A72 /* MealDetailViewController.swift in Sources */,
 				5EF26D5D2817081200EF6974 /* APIClient.swift in Sources */,
 				5E364DEB281C524E00C52A2C /* Endpoints.swift in Sources */,
@@ -364,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EF26D5E2817081200EF6974 /* APIClient.swift in Sources */,
+				5E07E950281DDCC600754ED8 /* MealViewModel.swift in Sources */,
 				5EF26D612817090F00EF6974 /* Meal.swift in Sources */,
 				5EC89D68281B675C00D60A72 /* MealDetailViewController.swift in Sources */,
 				5EF26D442817040F00EF6974 /* MealAPIClientTests.swift in Sources */,

@@ -30,8 +30,13 @@ class MealListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showMealDetail" {
-            let vc = segue.destination as? MealDetailViewController
-            vc?.meal = currentMeal
+            let viewController = segue.destination as? MealDetailViewController
+            
+            let apiClient = APIClient()
+            let mealViewModel = MealViewModel(apiClient: apiClient)
+            mealViewModel.delegate = viewController
+            viewController?.viewModel = mealViewModel
+            viewController?.idString = currentMeal?.idMeal
         }
     }
     
@@ -101,6 +106,5 @@ extension MealListViewController: ViewModelDelegate {
         activityIndicator.stopAnimating()
         print("\(error.localizedDescription)")
     }
-    
 }
 
