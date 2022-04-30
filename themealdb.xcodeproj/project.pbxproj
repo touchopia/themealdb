@@ -10,6 +10,7 @@
 		5E07E94F281DDCC600754ED8 /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E07E94E281DDCC600754ED8 /* MealViewModel.swift */; };
 		5E07E950281DDCC600754ED8 /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E07E94E281DDCC600754ED8 /* MealViewModel.swift */; };
 		5E07E952281DDCF000754ED8 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E07E951281DDCF000754ED8 /* Protocols.swift */; };
+		5E07E955281DE7B900754ED8 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E07E951281DDCF000754ED8 /* Protocols.swift */; };
 		5E364DEB281C524E00C52A2C /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E364DEA281C524E00C52A2C /* Endpoints.swift */; };
 		5E646FA42819A8B50028AA13 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E646FA22819A8B50028AA13 /* MealTableViewCell.swift */; };
 		5E646FA62819A8B50028AA13 /* MealTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E646FA32819A8B50028AA13 /* MealTableViewCell.xib */; };
@@ -103,14 +104,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5E07E954281DDCFF00754ED8 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				5E07E951281DDCF000754ED8 /* Protocols.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
 		5E364DEC281C581700C52A2C /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +116,7 @@
 		5E364DED281C588000C52A2C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				5E07E951281DDCF000754ED8 /* Protocols.swift */,
 				5E646FA82819AE7F0028AA13 /* MealListViewModel.swift */,
 				5E07E94E281DDCC600754ED8 /* MealViewModel.swift */,
 			);
@@ -184,7 +178,6 @@
 				5EF26D6628170B5400EF6974 /* Controllers */,
 				5EF26D6528170B3E00EF6974 /* Models */,
 				5E364DEE281C589F00C52A2C /* TableViewCells */,
-				5E07E954281DDCFF00754ED8 /* Protocols */,
 				5E364DEF281C58B100C52A2C /* Extensions */,
 				5EF26D322817040E00EF6974 /* Main.storyboard */,
 				5EF26D352817040E00EF6974 /* Assets.xcassets */,
@@ -387,6 +380,7 @@
 				5EF26D442817040F00EF6974 /* MealAPIClientTests.swift in Sources */,
 				5E82126E2818AEFA00722AD9 /* UIImageView+Cache.swift in Sources */,
 				5E646FAA2819AE7F0028AA13 /* MealListViewModel.swift in Sources */,
+				5E07E955281DE7B900754ED8 /* Protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
