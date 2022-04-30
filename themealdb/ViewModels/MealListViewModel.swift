@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// ViewModelDelegate for Notifications on data load
 protocol ViewModelDelegate: AnyObject {
     func willLoadData()
     func didLoadData()
@@ -24,9 +25,7 @@ class MealListViewModel: ViewModelType {
     
     private let apiClient: APIClient
     weak var delegate: ViewModelDelegate?
-    //private var dataSource: UsersDataSource!
-    
-    public var meals: [Meal]
+    var meals: [Meal]
     
     // MARK: - Initializer
     
@@ -37,6 +36,7 @@ class MealListViewModel: ViewModelType {
     }
     
     // Delegate initializer
+    // Can do tableView datasource setup if needed
     func bootstrap() {
         print("Hello Bootstrap!")
         
@@ -54,9 +54,7 @@ class MealListViewModel: ViewModelType {
                 
                 // Sort meals alphabetically
                 
-                self?.meals = meals.sorted {
-                    $0.strMeal < $1.strMeal
-                }
+                self?.meals = meals.sorted { $0.strMeal < $1.strMeal }
                 completion(meals)
                 
                 // Must call delegate on main thread
