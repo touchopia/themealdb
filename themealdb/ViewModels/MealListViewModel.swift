@@ -20,12 +20,7 @@ class MealListViewModel: ViewModelType {
     init(apiClient: APIClient) {
         self.apiClient = apiClient
         self.meals = [Meal]()
-        self.bootstrap()
     }
-    
-    // Delegate initializer
-    // Can do tableView datasource setup if needed
-    func bootstrap() {}
     
     // MARK: - Initializer
     
@@ -38,7 +33,6 @@ class MealListViewModel: ViewModelType {
             case .success(let meals):
                 
                 // Sort meals alphabetically
-                
                 self?.meals = meals.sorted { $0.strMeal < $1.strMeal }
                 completion(meals)
                 
@@ -47,10 +41,6 @@ class MealListViewModel: ViewModelType {
                     self?.delegate?.didLoadData()
                 }
             case .failure(let error):
-                print(error.localizedDescription)
-                let emptyArray = [Meal]()
-                completion(emptyArray)
-                
                 // Must call on main thread
                 DispatchQueue.main.async {
                     self?.delegate?.didLoadDataWithError(error: error)

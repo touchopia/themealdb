@@ -58,7 +58,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvy-H5-EqK">
                                 <rect key="frame" x="8" y="88" width="398" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="NF7-NJ-Epw"/>
+                                    <constraint firstAttribute="height" constant="44" id="eRC-kh-5gc"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
@@ -79,12 +79,11 @@
                                 <rect key="frame" x="0.0" y="140" width="414" height="300"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="0Z3-PP-VSY"/>
-                                    <constraint firstAttribute="height" constant="300" id="yPR-RT-L9L"/>
+                                    <constraint firstAttribute="height" constant="300" id="6Jx-QU-TMF"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="efl-7b-ycw">
-                                <rect key="frame" x="0.0" y="473" width="414" height="177.5"/>
+                                <rect key="frame" x="0.0" y="456" width="414" height="177.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="77J-sb-zEq">
                                         <rect key="frame" x="0.0" y="0.0" width="203" height="177.5"/>
@@ -222,17 +221,17 @@
                         <viewLayoutGuide key="safeArea" id="3kH-4P-YCu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="efl-7b-ycw" firstAttribute="top" secondItem="lKz-Db-09d" secondAttribute="bottom" constant="33" id="4bI-6g-8Me"/>
-                            <constraint firstItem="lKz-Db-09d" firstAttribute="top" secondItem="Zvy-H5-EqK" secondAttribute="bottom" constant="8" symbolic="YES" id="GFf-UT-0yp"/>
-                            <constraint firstItem="X2I-Cc-Um3" firstAttribute="centerX" secondItem="lKz-Db-09d" secondAttribute="centerX" id="JeN-We-LuZ"/>
-                            <constraint firstItem="lKz-Db-09d" firstAttribute="trailing" secondItem="3kH-4P-YCu" secondAttribute="trailing" id="WUN-vT-ubW"/>
-                            <constraint firstItem="lKz-Db-09d" firstAttribute="leading" secondItem="3kH-4P-YCu" secondAttribute="leading" id="dpT-zX-4zW"/>
-                            <constraint firstItem="3kH-4P-YCu" firstAttribute="trailing" secondItem="Zvy-H5-EqK" secondAttribute="trailing" constant="8" id="gb8-SX-uyp"/>
-                            <constraint firstItem="efl-7b-ycw" firstAttribute="leading" secondItem="3kH-4P-YCu" secondAttribute="leading" id="igA-3t-bMI"/>
-                            <constraint firstItem="Zvy-H5-EqK" firstAttribute="top" secondItem="3kH-4P-YCu" secondAttribute="top" id="nfc-CJ-nOX"/>
-                            <constraint firstItem="3kH-4P-YCu" firstAttribute="trailing" secondItem="efl-7b-ycw" secondAttribute="trailing" id="o7d-ec-edt"/>
-                            <constraint firstItem="Zvy-H5-EqK" firstAttribute="leading" secondItem="3kH-4P-YCu" secondAttribute="leading" constant="8" id="qXT-1O-hu0"/>
-                            <constraint firstItem="X2I-Cc-Um3" firstAttribute="centerY" secondItem="lKz-Db-09d" secondAttribute="centerY" id="w5a-Bp-h40"/>
+                            <constraint firstItem="X2I-Cc-Um3" firstAttribute="centerY" secondItem="lKz-Db-09d" secondAttribute="centerY" id="82s-Pk-fOP"/>
+                            <constraint firstItem="X2I-Cc-Um3" firstAttribute="centerX" secondItem="lKz-Db-09d" secondAttribute="centerX" id="BqI-bc-OH7"/>
+                            <constraint firstItem="Zvy-H5-EqK" firstAttribute="leading" secondItem="3kH-4P-YCu" secondAttribute="leading" constant="8" id="COh-Ez-WGx"/>
+                            <constraint firstItem="3kH-4P-YCu" firstAttribute="trailing" secondItem="Zvy-H5-EqK" secondAttribute="trailing" constant="8" id="FDY-DU-3Jl"/>
+                            <constraint firstItem="lKz-Db-09d" firstAttribute="trailing" secondItem="3kH-4P-YCu" secondAttribute="trailing" id="NTH-ow-qO8"/>
+                            <constraint firstItem="efl-7b-ycw" firstAttribute="leading" secondItem="3kH-4P-YCu" secondAttribute="leading" id="Tg6-Er-hDs"/>
+                            <constraint firstItem="Zvy-H5-EqK" firstAttribute="top" secondItem="3kH-4P-YCu" secondAttribute="top" id="VNA-mb-O3h"/>
+                            <constraint firstItem="3kH-4P-YCu" firstAttribute="trailing" secondItem="efl-7b-ycw" secondAttribute="trailing" id="ddU-pG-Zn6"/>
+                            <constraint firstItem="lKz-Db-09d" firstAttribute="top" secondItem="Zvy-H5-EqK" secondAttribute="bottom" constant="8" symbolic="YES" id="e1n-XH-m54"/>
+                            <constraint firstItem="efl-7b-ycw" firstAttribute="top" secondItem="lKz-Db-09d" secondAttribute="bottom" constant="16" id="iHI-Ga-6DF"/>
+                            <constraint firstItem="lKz-Db-09d" firstAttribute="leading" secondItem="3kH-4P-YCu" secondAttribute="leading" id="uuU-Yi-jMm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LxG-Vz-Ep1"/>

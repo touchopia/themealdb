@@ -19,21 +19,13 @@ class MealViewModel: ViewModelType {
     
     init(apiClient: APIClient) {
         self.apiClient = apiClient
-
-        self.bootstrap()
     }
-    
-    // Delegate initializer
-    // Can do tableView datasource setup if needed
-    func bootstrap() {}
     
     // MARK: - Initializer
     
     func loadMeal(idString: String, completion: @escaping (Meal) -> Void)  {
         
         delegate?.willLoadData()
-        
-       // func fetchMeal(idString: String, completion: @escaping (Result<Meal, Error>) -> Void)
         
         apiClient.fetchMeal(idString: idString, completion: { [weak self] result in
             switch result {
@@ -45,8 +37,6 @@ class MealViewModel: ViewModelType {
                     self?.delegate?.didLoadData()
                 }
             case .failure(let error):
-                print(error.localizedDescription)
-                
                 // Must call on main thread
                 DispatchQueue.main.async {
                     self?.delegate?.didLoadDataWithError(error: error)

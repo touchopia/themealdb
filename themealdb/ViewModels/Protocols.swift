@@ -14,6 +14,5 @@ protocol ViewModelDelegate: AnyObject {
 }
 
 protocol ViewModelType {
-    func bootstrap()
     var delegate: ViewModelDelegate? { get set }
 }

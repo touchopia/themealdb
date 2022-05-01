@@ -21,6 +21,7 @@
 		5E82126E2818AEFA00722AD9 /* UIImageView+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E82126C2818AEFA00722AD9 /* UIImageView+Cache.swift */; };
 		5EC89D67281B675C00D60A72 /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC89D66281B675C00D60A72 /* MealDetailViewController.swift */; };
 		5EC89D68281B675C00D60A72 /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC89D66281B675C00D60A72 /* MealDetailViewController.swift */; };
+		5EEF49BC281EF98600C1EFA8 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E364DEA281C524E00C52A2C /* Endpoints.swift */; };
 		5EF26D2D2817040E00EF6974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF26D2C2817040E00EF6974 /* AppDelegate.swift */; };
 		5EF26D2F2817040E00EF6974 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF26D2E2817040E00EF6974 /* SceneDelegate.swift */; };
 		5EF26D312817040E00EF6974 /* MealListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF26D302817040E00EF6974 /* MealListViewController.swift */; };
@@ -380,6 +381,7 @@
 				5EF26D442817040F00EF6974 /* MealAPIClientTests.swift in Sources */,
 				5E82126E2818AEFA00722AD9 /* UIImageView+Cache.swift in Sources */,
 				5E646FAA2819AE7F0028AA13 /* MealListViewModel.swift in Sources */,
+				5EEF49BC281EF98600C1EFA8 /* Endpoints.swift in Sources */,
 				5E07E955281DE7B900754ED8 /* Protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
