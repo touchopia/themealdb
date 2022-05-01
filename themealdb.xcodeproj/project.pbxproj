@@ -140,13 +140,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		5E364DF0281C58CD00C52A2C /* Networking */ = {
+		5E364DF0281C58CD00C52A2C /* Meal API */ = {
 			isa = PBXGroup;
 			children = (
 				5EF26D5C2817081200EF6974 /* APIClient.swift */,
 				5E364DEA281C524E00C52A2C /* Endpoints.swift */,
 			);
-			path = Networking;
+			path = "Meal API";
 			sourceTree = "<group>";
 		};
 		5EF26D202817040E00EF6974 = {
@@ -173,9 +173,9 @@
 			isa = PBXGroup;
 			children = (
 				5E364DEC281C581700C52A2C /* Delegates */,
-				5E364DF0281C58CD00C52A2C /* Networking */,
+				5E364DF0281C58CD00C52A2C /* Meal API */,
 				5E364DED281C588000C52A2C /* ViewModels */,
-				5EF26D6628170B5400EF6974 /* Controllers */,
+				5EF26D6628170B5400EF6974 /* Meal Controllers */,
 				5EF26D6528170B3E00EF6974 /* Models */,
 				5E364DEE281C589F00C52A2C /* TableViewCells */,
 				5E364DEF281C58B100C52A2C /* Extensions */,
@@ -212,13 +212,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		5EF26D6628170B5400EF6974 /* Controllers */ = {
+		5EF26D6628170B5400EF6974 /* Meal Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				5EF26D302817040E00EF6974 /* MealListViewController.swift */,
 				5EC89D66281B675C00D60A72 /* MealDetailViewController.swift */,
 			);
-			path = Controllers;
+			path = "Meal Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

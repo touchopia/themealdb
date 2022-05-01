@@ -16,8 +16,8 @@ class MealTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.mealImageView?.layer.cornerRadius = 12
-        self.mealImageView?.clipsToBounds = true
+//        self.mealImageView?.layer.cornerRadius = 12
+//        self.mealImageView?.clipsToBounds = true
     }
     
     override func prepareForReuse() {
