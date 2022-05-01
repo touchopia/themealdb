@@ -82,7 +82,11 @@ extension MealListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "MealTableViewCell", for: indexPath) as? MealTableViewCell {
-            cell.configure(meal: meals[indexPath.row])
+            
+            let apiClient = APIClient()
+            let mealViewModel = MealViewModel(apiClient: apiClient)
+            mealViewModel.meal = meals[indexPath.row]
+            cell.configure(viewModel: mealViewModel)
             return cell
         }
         return UITableViewCell()

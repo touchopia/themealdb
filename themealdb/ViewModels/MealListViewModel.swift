@@ -36,12 +36,10 @@ class MealListViewModel: ViewModelType {
                 self?.meals = meals.sorted { $0.strMeal < $1.strMeal }
                 completion(meals)
                 
-                // Must call delegate on main thread
                 DispatchQueue.main.async {
                     self?.delegate?.didLoadData()
                 }
             case .failure(let error):
-                // Must call on main thread
                 DispatchQueue.main.async {
                     self?.delegate?.didLoadDataWithError(error: error)
                 }

@@ -10,7 +10,6 @@ import Foundation
 class MealViewModel: ViewModelType {
 
     // MARK: - Properties
-    
     private let apiClient: APIClient
     weak var delegate: ViewModelDelegate?
     var meal: Meal?
@@ -31,13 +30,10 @@ class MealViewModel: ViewModelType {
             switch result {
             case .success(let meal):
                 completion(meal)
-                
-                // Must call delegate on main thread
                 DispatchQueue.main.async {
                     self?.delegate?.didLoadData()
                 }
             case .failure(let error):
-                // Must call on main thread
                 DispatchQueue.main.async {
                     self?.delegate?.didLoadDataWithError(error: error)
                 }

@@ -27,11 +27,15 @@ class APIClient: HTTPClient {
     
     public func get(from url: URL, completion: @escaping (Result<Data, Error>) -> Void) {
         
-        let task = session.dataTask(with: url) { data, response, error in
+        loadingStatus = .loading
+        
+        let task = session.dataTask(with: url) { [weak self] data, response, error in
             if let error = error {
                 completion(.failure(error))
+                self?.loadingStatus = .idle
             } else if let data = data {
                 completion(.success(data))
+                self?.loadingStatus = .idle
             }
         }
         task.resume()

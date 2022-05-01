@@ -16,8 +16,6 @@ class MealTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-//        self.mealImageView?.layer.cornerRadius = 12
-//        self.mealImageView?.clipsToBounds = true
     }
     
     override func prepareForReuse() {
@@ -25,8 +23,11 @@ class MealTableViewCell: UITableViewCell {
         self.mealImageView.image = nil
     }
     
-    func configure(meal: Meal) {
-        self.titleLabel.text = meal.strMeal
-        self.mealImageView?.loadImageFromURL(urlString: meal.strMealThumb, placeholder: placeholderImage)
+    func configure(viewModel: MealViewModel) {
+        
+        if let meal = viewModel.meal {
+            self.titleLabel.text = meal.strMeal
+            self.mealImageView?.loadImageFromURL(urlString: meal.strMealThumb, placeholder: placeholderImage)
+        }
     }
 }
