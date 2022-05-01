@@ -104,7 +104,19 @@ extension MealListViewController: ViewModelDelegate {
     
     func didLoadDataWithError(error: Error) {
         activityIndicator.stopAnimating()
-        print("\(error.localizedDescription)")
+        alertErrorWithMessage(message: error.localizedDescription)
+    }
+    
+    func alertErrorWithMessage(message: String) {
+        let alert = UIAlertController(title: "Internet Error",
+                                      message: message,
+                                      preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Try Again",
+                                      style: UIAlertAction.Style.destructive,
+                                      handler: { [weak self] action in
+                self?.loadData()
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
