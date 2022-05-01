@@ -82,14 +82,28 @@
                                     <constraint firstAttribute="height" constant="300" id="6Jx-QU-TMF"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73u-72-VcS">
+                                <rect key="frame" x="20" y="448" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="9uf-vZ-R27"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="AvenirNext-Regular"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="efl-7b-ycw">
-                                <rect key="frame" x="0.0" y="456" width="414" height="177.5"/>
+                                <rect key="frame" x="20" y="556" width="374" height="177.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="77J-sb-zEq">
-                                        <rect key="frame" x="0.0" y="0.0" width="203" height="177.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="183" height="177.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daN-pt-Fan">
-                                                <rect key="frame" x="0.0" y="0.0" width="203" height="19.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="183" height="19.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Label">
                                                         <attributes>
@@ -101,7 +115,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UxL-0t-hXc">
-                                                <rect key="frame" x="0.0" y="39.5" width="203" height="19.5"/>
+                                                <rect key="frame" x="0.0" y="39.5" width="183" height="19.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Label">
                                                         <attributes>
@@ -113,7 +127,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9y-bs-7U9">
-                                                <rect key="frame" x="0.0" y="79" width="203" height="19.5"/>
+                                                <rect key="frame" x="0.0" y="79" width="183" height="19.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Label">
                                                         <attributes>
@@ -125,7 +139,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5J-a8-ZbM">
-                                                <rect key="frame" x="0.0" y="118.5" width="203" height="19.5"/>
+                                                <rect key="frame" x="0.0" y="118.5" width="183" height="19.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Label">
                                                         <attributes>
@@ -137,7 +151,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhA-bi-Twb">
-                                                <rect key="frame" x="0.0" y="158" width="203" height="19.5"/>
+                                                <rect key="frame" x="0.0" y="158" width="183" height="19.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Label">
                                                         <attributes>
@@ -151,10 +165,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OYM-tY-4vf">
-                                        <rect key="frame" x="211" y="0.0" width="203" height="177.5"/>
+                                        <rect key="frame" x="191" y="0.0" width="183" height="177.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ax-wJ-qT4">
-                                                <rect key="frame" x="0.0" y="0.0" width="203" height="19.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="183" height="19.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Label">
                                                         <attributes>
@@ -166,7 +180,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWe-J1-rBj">
-                                                <rect key="frame" x="0.0" y="39.5" width="203" height="19.5"/>
+                                                <rect key="frame" x="0.0" y="39.5" width="183" height="19.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Label">
                                                         <attributes>
@@ -178,7 +192,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="7" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0va-pC-Vg6">
-                                                <rect key="frame" x="0.0" y="79" width="203" height="19.5"/>
+                                                <rect key="frame" x="0.0" y="79" width="183" height="19.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Label">
                                                         <attributes>
@@ -190,7 +204,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="8" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPI-Ih-SaK">
-                                                <rect key="frame" x="0.0" y="118.5" width="203" height="19.5"/>
+                                                <rect key="frame" x="0.0" y="118.5" width="183" height="19.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Label">
                                                         <attributes>
@@ -202,7 +216,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="9" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QA-7Y-OSV">
-                                                <rect key="frame" x="0.0" y="158" width="203" height="19.5"/>
+                                                <rect key="frame" x="0.0" y="158" width="183" height="19.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Label">
                                                         <attributes>
@@ -221,16 +235,19 @@
                         <viewLayoutGuide key="safeArea" id="3kH-4P-YCu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="73u-72-VcS" firstAttribute="leading" secondItem="3kH-4P-YCu" secondAttribute="leading" constant="20" id="2hw-8L-Ifi"/>
+                            <constraint firstItem="Zvy-H5-EqK" firstAttribute="top" secondItem="3kH-4P-YCu" secondAttribute="top" id="6F1-km-5iO"/>
                             <constraint firstItem="X2I-Cc-Um3" firstAttribute="centerY" secondItem="lKz-Db-09d" secondAttribute="centerY" id="82s-Pk-fOP"/>
+                            <constraint firstItem="efl-7b-ycw" firstAttribute="top" secondItem="73u-72-VcS" secondAttribute="bottom" constant="8" id="9Pk-4n-NYa"/>
                             <constraint firstItem="X2I-Cc-Um3" firstAttribute="centerX" secondItem="lKz-Db-09d" secondAttribute="centerX" id="BqI-bc-OH7"/>
                             <constraint firstItem="Zvy-H5-EqK" firstAttribute="leading" secondItem="3kH-4P-YCu" secondAttribute="leading" constant="8" id="COh-Ez-WGx"/>
                             <constraint firstItem="3kH-4P-YCu" firstAttribute="trailing" secondItem="Zvy-H5-EqK" secondAttribute="trailing" constant="8" id="FDY-DU-3Jl"/>
                             <constraint firstItem="lKz-Db-09d" firstAttribute="trailing" secondItem="3kH-4P-YCu" secondAttribute="trailing" id="NTH-ow-qO8"/>
-                            <constraint firstItem="efl-7b-ycw" firstAttribute="leading" secondItem="3kH-4P-YCu" secondAttribute="leading" id="Tg6-Er-hDs"/>
-                            <constraint firstItem="Zvy-H5-EqK" firstAttribute="top" secondItem="3kH-4P-YCu" secondAttribute="top" id="VNA-mb-O3h"/>
-                            <constraint firstItem="3kH-4P-YCu" firstAttribute="trailing" secondItem="efl-7b-ycw" secondAttribute="trailing" id="ddU-pG-Zn6"/>
+                            <constraint firstItem="efl-7b-ycw" firstAttribute="leading" secondItem="3kH-4P-YCu" secondAttribute="leading" constant="20" id="dl9-wL-zTk"/>
                             <constraint firstItem="lKz-Db-09d" firstAttribute="top" secondItem="Zvy-H5-EqK" secondAttribute="bottom" constant="8" symbolic="YES" id="e1n-XH-m54"/>
-                            <constraint firstItem="efl-7b-ycw" firstAttribute="top" secondItem="lKz-Db-09d" secondAttribute="bottom" constant="16" id="iHI-Ga-6DF"/>
+                            <constraint firstItem="3kH-4P-YCu" firstAttribute="trailing" secondItem="73u-72-VcS" secondAttribute="trailing" constant="20" id="g5L-Wz-tGm"/>
+                            <constraint firstItem="3kH-4P-YCu" firstAttribute="trailing" secondItem="efl-7b-ycw" secondAttribute="trailing" constant="20" id="h9h-Ov-efd"/>
+                            <constraint firstItem="73u-72-VcS" firstAttribute="top" secondItem="lKz-Db-09d" secondAttribute="bottom" constant="8" id="tur-i0-uSU"/>
                             <constraint firstItem="lKz-Db-09d" firstAttribute="leading" secondItem="3kH-4P-YCu" secondAttribute="leading" id="uuU-Yi-jMm"/>
                         </constraints>
                     </view>
@@ -240,6 +257,7 @@
                         <outlet property="columnOneStackView" destination="77J-sb-zEq" id="7zn-Or-0EQ"/>
                         <outlet property="columnTwoStackView" destination="OYM-tY-4vf" id="dls-G2-qqA"/>
                         <outlet property="imageView" destination="lKz-Db-09d" id="Svq-7s-zcU"/>
+                        <outlet property="instructionsLabel" destination="73u-72-VcS" id="V7s-Jg-EKY"/>
                         <outlet property="titleLabel" destination="Zvy-H5-EqK" id="1D2-cp-ghu"/>
                         <outletCollection property="ingrediateLabels" destination="daN-pt-Fan" collectionClass="NSMutableArray" id="Xca-lG-2DM"/>
                         <outletCollection property="ingrediateLabels" destination="UxL-0t-hXc" collectionClass="NSMutableArray" id="OYQ-UB-x6T"/>

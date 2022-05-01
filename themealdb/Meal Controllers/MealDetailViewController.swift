@@ -12,9 +12,11 @@ class MealDetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
+    @IBOutlet weak var instructionsLabel: UILabel!
     @IBOutlet weak var columnOneStackView: UIStackView!
     @IBOutlet weak var columnTwoStackView: UIStackView!
+    
+    
     
     @IBOutlet var ingrediateLabels: [UILabel]!
     @IBOutlet var ingrediateLabels2: [UILabel]!
@@ -70,6 +72,8 @@ class MealDetailViewController: UIViewController {
         imageView.alpha = 0
         
         imageView.loadImageFromURL(urlString: meal.strMealThumb)
+        
+        instructionsLabel.text = meal.strInstructions
         
         ingrediateLabels[0].text = meal.strIngredient1 ?? ""
         ingrediateLabels[1].text = meal.strIngredient2 ?? ""
