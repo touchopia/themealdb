@@ -20,7 +20,7 @@ class MealViewModel: ViewModelType {
         self.apiClient = apiClient
     }
     
-    // MARK: - Initializer
+    // MARK: - Load Meal
     
     func loadMeal(idString: String, completion: @escaping (Meal) -> Void)  {
         

@@ -58,33 +58,33 @@ class MealDetailViewController: UIViewController {
     }
     
     func updateUI() {
-        if let meal = meal {
-            titleLabel.text = meal.strMeal.uppercased()
-            
-            imageView.alpha = 0
-            
-            imageView.loadImageFromURL(urlString: meal.strMealThumb)
-            
-            ingrediateLabels[0].text = meal.strIngredient1 ?? ""
-            ingrediateLabels[1].text = meal.strIngredient2 ?? ""
-            ingrediateLabels[2].text = meal.strIngredient3 ?? ""
-            ingrediateLabels[3].text = meal.strIngredient4 ?? ""
-            ingrediateLabels[4].text = meal.strIngredient5 ?? ""
-            ingrediateLabels2[0].text = meal.strIngredient6 ?? ""
-            ingrediateLabels2[1].text = meal.strIngredient7 ?? ""
-            ingrediateLabels2[2].text = meal.strIngredient8 ?? ""
-            ingrediateLabels2[3].text = meal.strIngredient9 ?? ""
-            ingrediateLabels2[4].text = meal.strIngredient10 ?? ""
-            
-            // Fade in ImageView
-            UIView.animate(withDuration: 0.2, delay: 0.5) {
-                self.imageView.alpha = 1
-            }
-        } else {
+        guard let meal = meal else {
             
             // Empty State
             activityIndicator.stopAnimating()
-            
+            return
+        }
+       
+        titleLabel.text = meal.strMeal.uppercased()
+        
+        imageView.alpha = 0
+        
+        imageView.loadImageFromURL(urlString: meal.strMealThumb)
+        
+        ingrediateLabels[0].text = meal.strIngredient1 ?? ""
+        ingrediateLabels[1].text = meal.strIngredient2 ?? ""
+        ingrediateLabels[2].text = meal.strIngredient3 ?? ""
+        ingrediateLabels[3].text = meal.strIngredient4 ?? ""
+        ingrediateLabels[4].text = meal.strIngredient5 ?? ""
+        ingrediateLabels2[0].text = meal.strIngredient6 ?? ""
+        ingrediateLabels2[1].text = meal.strIngredient7 ?? ""
+        ingrediateLabels2[2].text = meal.strIngredient8 ?? ""
+        ingrediateLabels2[3].text = meal.strIngredient9 ?? ""
+        ingrediateLabels2[4].text = meal.strIngredient10 ?? ""
+        
+        // Fade in ImageView
+        UIView.animate(withDuration: 0.2, delay: 0.5) {
+            self.imageView.alpha = 1
         }
     }
 }

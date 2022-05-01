@@ -10,4 +10,8 @@ import XCTest
 
 class MealAPITests: XCTestCase {
     
+    func test() {
+        let success = true
+        XCTAssertEqual(success, true)
+    }
 }
