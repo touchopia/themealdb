@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let rootViewController = storyboard.instantiateViewController(withIdentifier: "MealListViewController") as! MealListViewController
-        let apiClient = APIClient()
+        let apiClient = MealAPIClient()
         let viewModel = MealListViewModel(apiClient: apiClient)
         rootViewController.configure(with: viewModel)
         

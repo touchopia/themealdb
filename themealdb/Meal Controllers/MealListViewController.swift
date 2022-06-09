@@ -32,8 +32,7 @@ class MealListViewController: UIViewController {
         if segue.identifier == "showMealDetail" {
             let viewController = segue.destination as? MealDetailViewController
             
-            let apiClient = APIClient()
-            let mealViewModel = MealViewModel(apiClient: apiClient)
+            let mealViewModel = MealViewModel()
             mealViewModel.delegate = viewController
             viewController?.viewModel = mealViewModel
             viewController?.idString = currentMeal?.idMeal
@@ -54,11 +53,7 @@ class MealListViewController: UIViewController {
         tableView.register(nib, forCellReuseIdentifier: "MealTableViewCell")
     }
     
-    func loadData() {
-        viewModel?.loadMealsList(completion: { [weak self] mealsArray in
-            self?.meals = mealsArray
-        })
-    }
+    func loadData() {}
 }
 
 extension MealListViewController: UITableViewDelegate {
@@ -83,8 +78,7 @@ extension MealListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "MealTableViewCell", for: indexPath) as? MealTableViewCell {
             
-            let apiClient = APIClient()
-            let mealViewModel = MealViewModel(apiClient: apiClient)
+            let mealViewModel = MealViewModel()
             mealViewModel.meal = meals[indexPath.row]
             cell.configure(viewModel: mealViewModel)
             return cell
@@ -118,7 +112,7 @@ extension MealListViewController: ViewModelDelegate {
         alert.addAction(UIAlertAction(title: "Try Again",
                                       style: UIAlertAction.Style.destructive,
                                       handler: { [weak self] action in
-                self?.loadData()
+                //self?.loadData()
         }))
         self.present(alert, animated: true, completion: nil)
     }

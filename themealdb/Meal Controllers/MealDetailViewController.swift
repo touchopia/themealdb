@@ -15,25 +15,12 @@ class MealDetailViewController: UIViewController {
     @IBOutlet weak var instructionsLabel: UILabel!
     @IBOutlet weak var columnOneStackView: UIStackView!
     @IBOutlet weak var columnTwoStackView: UIStackView!
-    
-    
-    
     @IBOutlet var ingrediateLabels: [UILabel]!
     @IBOutlet var ingrediateLabels2: [UILabel]!
     
     var viewModel: MealViewModel?
-    
     var meal: Meal?
-    
     var idString: String?
-    
-    var hasFullMeal: Bool = false
-
-    // MARK: -
-    func configure(with viewModel: MealViewModel) {
-        self.viewModel = viewModel
-        self.viewModel?.delegate = self
-    }
     
     // MARK: - View Lifecycle
 
@@ -45,25 +32,10 @@ class MealDetailViewController: UIViewController {
         super.viewDidLoad()
         
         updateUI()
-        loadMeal()
-    }
-    
-    func loadMeal() {
-        guard let idString = idString else {
-            print("cant load meal")
-            return
-        }
-        
-        viewModel?.loadMeal(idString: idString, completion: { [weak self] theMeal in
-            self?.meal = theMeal
-        })
     }
     
     func updateUI() {
         guard let meal = meal else {
-            
-            // Empty State
-            activityIndicator.stopAnimating()
             return
         }
        
@@ -101,10 +73,10 @@ extension MealDetailViewController: ViewModelDelegate {
     }
     
     func didLoadData() {
-        updateUI()
+        activityIndicator.stopAnimating()
     }
     
     func didLoadDataWithError(error: Error) {
-        print("\(error.localizedDescription)")
+        activityIndicator.stopAnimating()
     }
 }

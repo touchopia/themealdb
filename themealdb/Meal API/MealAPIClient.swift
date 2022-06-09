@@ -14,12 +14,7 @@ enum LoadingState {
     case completed
 }
 
-public protocol HTTPClient {
-    var session: URLSession { get }
-    func get(from url: URL, completion: @escaping (Result<Data, Error>) -> Void)
-}
-
-class APIClient: HTTPClient {
+final class MealAPIClient: HTTPClient {
     
     let endPoints = EndPoints()
     var session = URLSession.shared

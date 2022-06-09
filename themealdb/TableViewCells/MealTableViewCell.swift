@@ -14,10 +14,6 @@ class MealTableViewCell: UITableViewCell {
     
     let placeholderImage = UIImage(named: "placeholder-image")
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     override func prepareForReuse() {
         super.prepareForReuse()
         self.mealImageView.image = nil
